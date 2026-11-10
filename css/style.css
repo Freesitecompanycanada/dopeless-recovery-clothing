@@ -1,0 +1,128 @@
+/* Dopeless Recovery Clothing Company — premium streetwear brand */
+
+:root {
+  --blk: #0a0a0a;
+  --cr: #f5f0e8;
+  --w: #fafaf8;
+  --gr: #999;
+  --gl: #c7c2b5;
+  --ac: #b0a898;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --disp: 'Archivo', var(--font);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--blk); background: var(--cr); line-height: 1.55; }
+.wrap { width: min(100% - 40px, 1120px); margin-inline: auto; }
+
+/* ========== HEADER ========== */
+
+.head { position: sticky; top: 0; z-index: 50; background: var(--blk); }
+.head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; }
+.logo { font-family: var(--disp); font-size: 1.2rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: var(--cr); text-decoration: none; }
+.head nav { display: flex; align-items: center; gap: 16px; }
+.head nav a:not(.btn) { color: var(--gl); text-decoration: none; font-size: .88rem; font-weight: 500; letter-spacing: .025em; transition: opacity .15s; }
+.head nav a:not(.btn):hover { opacity: .75; }
+.head .btn { background: transparent; border: 1.5px solid var(--cr); color: var(--cr); }
+.head .btn:hover { background: var(--cr); color: var(--blk); }
+
+/* ========== HERO ========== */
+
+.hero { position: relative; isolation: isolate; color: var(--cr); background: var(--blk); min-height: min(90vh, 680px); display: flex; align-items: center; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0a 35%, #1a1a1a 70%, #2a2825); z-index: -1; }
+.hero .wrap { padding: 40px 20px; }
+.hero h1 { font-family: var(--disp); font-size: clamp(2.8rem, 8vw, 5.6rem); font-weight: 900; line-height: 1.08; letter-spacing: -.03em; margin-bottom: 12px; }
+.hero h1 em { font-style: normal; color: var(--gl); }
+.hero .lead { font-size: 1.25rem; color: var(--gl); font-weight: 400; margin-bottom: 28px; max-width: 34ch; }
+.hero .actions { display: flex; gap: 14px; }
+.hero .btn { background: var(--cr); color: var(--blk); font-weight: 700; }
+.hero .btn-line { background: transparent; border: 1.5px solid var(--gl); color: var(--gl); }
+.hero .btn-line:hover { background: var(--cr); color: var(--blk); border-color: var(--cr); }
+
+/* ========== BUTTONS ========== */
+
+.btn, .btn-line { display: inline-block; padding: 14px 28px; border-radius: 6px; font-size: .95rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 0; transition: all .15s; }
+.btn-line { background: transparent; border: 1.5px solid var(--blk); color: var(--blk); }
+.btn-line:hover { background: var(--blk); color: var(--cr); }
+
+/* ========== STORY ========== */
+
+.story { padding: 100px 0 80px; background: var(--cr); }
+.story .wrap { max-width: 960px; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.story-text h2 { font-family: var(--disp); font-size: clamp(2rem, 4.8vw, 3.4rem); font-weight: 900; line-height: 1.1; margin-bottom: 28px; }
+.story-text p { font-size: 1.05rem; margin-bottom: 18px; color: #3a3a3a; max-width: 48ch; }
+.story-text .tagline { font-style: italic; font-size: 1.1rem; color: var(--blk); font-weight: 600; margin-top: 8px; }
+.story-visual { background: var(--blk); border-radius: 14px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+.story-visual .placeholder { font-size: 4rem; color: var(--cr); }
+
+/* ========== COLLECTIONS ========== */
+
+.collections { padding: 100px 0 80px; background: var(--w); }
+.collections h2 { font-family: var(--disp); font-size: clamp(1.8rem, 4.2vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 6px; }
+.collections h2 em { font-style: normal; color: var(--ac); }
+.collections .sub { font-size: 1rem; color: #555; margin-bottom: 40px; }
+.coll-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.coll-card { background: var(--cr); border-radius: 14px; padding: 32px; }
+.coll-visual { width: 100%; aspect-ratio: 4/3; background: var(--blk); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.coll-visual span { color: var(--cr); font-size: 2.4rem; }
+.coll-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 6px; }
+.coll-card p { font-size: .9rem; color: #555; }
+
+/* ========== MISSION ========== */
+
+.mission { padding: 80px 0; background: var(--blk); text-align: center; }
+.mission blockquote { font-size: clamp(1.4rem, 3.2vw, 2rem); color: var(--cr); font-weight: 500; line-height: 1.4; max-width: 32ch; margin: 0 auto 16px; font-style: italic; }
+.mission p { color: var(--gl); font-size: .95rem; }
+
+/* ========== CONTACT ========== */
+
+.contact { padding: 100px 0; background: var(--cr); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-info h2 { font-family: var(--disp); font-size: clamp(1.4rem, 3.6vw, 2.4rem); font-weight: 900; margin-bottom: 16px; }
+.contact-info p { font-size: .98rem; color: #3a3a3a; margin-bottom: 18px; }
+.contact-detail { margin-top: 10px; }
+.contact-detail strong { display: block; font-size: .78rem; color: var(--gr); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
+.contact-detail a { color: var(--blk); text-decoration: none; font-weight: 500; }
+.contact-detail a:hover { opacity: .7; }
+.contact form { display: grid; gap: 16px; background: var(--w); padding: 32px; border-radius: 14px; }
+.contact form label { display: grid; gap: 6px; font-weight: 600; font-size: .85rem; color: #555; }
+.contact form input, .contact form textarea { padding: 12px 14px; border: 1.5px solid #ddd; border-radius: 8px; font-size: .92rem; font-family: var(--font); background: var(--cr); }
+.contact form input:focus, .contact form textarea:focus { outline: 0; border-color: var(--blk); }
+.contact form .btn { background: var(--blk); color: var(--cr); font-weight: 700; justify-self: end; }
+
+/* ========== FOOTER ========== */
+
+footer { padding: 48px 0; background: var(--blk); color: var(--gl); font-size: .85rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+footer .logo { font-size: 1rem; }
+.foot-links { text-align: right; }
+.foot-links a { color: var(--gl); text-decoration: none; }
+.foot-links a:hover { opacity: .7; }
+.foot-links p { margin-bottom: 6px; }
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 800px) {
+  .story-grid, .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+  .coll-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); }
+  .hero .lead { font-size: 1.1rem; }
+  .story { padding: 72px 0 56px; }
+  .collections { padding: 72px 0 56px; }
+  .contact { padding: 72px 0; }
+  .story-visual { min-height: 300px; }
+  .head nav a:not(.btn) { display: none; }
+  footer .wrap { flex-direction: column; text-align: center; gap: 12px; }
+  .foot-links { text-align: center; }
+}
+
+@media (max-width: 500px) {
+  .hero { min-height: min(80vh, 520px); }
+  .hero .wrap { padding: 32px 16px; }
+  .hero .actions { flex-direction: column; }
+  .hero .actions .btn, .hero .actions .btn-line { text-align: center; }
+  .coll-card { padding: 24px; }
+  .contact form { padding: 24px; }
+}
