@@ -102,3 +102,20 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--coa
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 .credit{margin-top:14px;font-size:.78rem;color:#bdb39d}.credit a{color:var(--cream);border-bottom:1px solid var(--sand)}
+
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,4,3,.72),rgba(5,4,3,.5) 45%,var(--bk)),var(--bg) center/cover}
+.hero-in{z-index:1}
+.band{position:relative;min-height:75vh;display:grid;place-items:center;background:linear-gradient(rgba(5,4,3,.55),rgba(5,4,3,.55)),var(--bg) center/cover fixed;border-block:1px solid var(--line)}
+.ph{margin:0;overflow:hidden;border:1px solid var(--line)}.ph img{width:100%;height:100%;object-fit:cover}
+.ph.tall{aspect-ratio:4/5}.ph.wide{aspect-ratio:16/8;margin:50px 0 0}
+.walk .two{align-items:center}.walk b{color:var(--cream)}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tri div{position:relative;min-height:420px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,rgba(5,4,3,.1),rgba(5,4,3,.92)),var(--bg) center/cover;border:1px solid var(--line);transition:.3s}
+.tri div:hover{border-color:var(--sand)}.tri span{font:700 .7rem var(--sans);letter-spacing:.25em;color:var(--sand);margin-bottom:auto}.tri h3{font-size:1.6rem;margin-bottom:8px}.tri p{color:#cfc6b2;font-size:.95rem}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.steps li{padding:30px 24px 10px 0}.steps li+li{padding-left:24px;border-left:1px solid var(--line)}
+.steps b{font:600 1.35rem var(--disp);display:block;margin-bottom:10px}.steps p{color:#cfc6b2;font-size:.95rem}.steps em{display:inline-block;margin-top:16px;font:700 .65rem var(--sans);letter-spacing:.25em;text-transform:uppercase;color:var(--sand)}
+.phead.photo{background:linear-gradient(180deg,rgba(5,4,3,.55),var(--bk)),var(--bg) center/cover;padding-block:clamp(90px,14vw,190px) clamp(50px,7vw,90px)}
+.fbrand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.fbrand img{width:44px}.fbrand b{font:600 1.1rem var(--disp);letter-spacing:.3em}.fbrand span{font:600 .65rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--sand)}
+@media(max-width:860px){.tri{grid-template-columns:1fr}.tri div{min-height:300px}.steps ol{grid-template-columns:1fr 1fr}.steps li:nth-child(3){padding-left:0;border-left:0}.band{background-attachment:scroll}}
+@media(max-width:520px){.steps ol{grid-template-columns:1fr}.steps li+li{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
