@@ -7,17 +7,17 @@ NAV = [("index.html","Home"),("shop.html","Collections"),("mission.html","Missio
 STROKE = 'stroke="rgba(239,230,210,.16)"'
 
 def tee(fill="#171513", mono=True):
-    m = '<image href="img/monogram.webp" x="72" y="52" width="56" height="55" style="mix-blend-mode:screen"/>' if mono else ''
+    m = '<image href="img/monogram.webp" x="72" y="52" width="56" height="55"/>' if mono else ''
     return f'<svg viewBox="0 0 200 200" role="img" aria-label="T-shirt concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L186 56 L166 88 L146 74 L146 182 L54 182 L54 74 L34 88 L14 56 Z" fill="{fill}" {STROKE}/><path d="M86 13 Q100 32 114 13" fill="none" stroke="rgba(239,230,210,.25)" stroke-width="3"/>{m}</svg>'
 
 def hoodie(fill="#171513"):
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hoodie concept"><path d="M64 26 Q100 -4 136 26 L180 58 L190 176 L162 180 L152 96 L152 186 L48 186 L48 96 L38 180 L10 176 L20 58 Z" fill="{fill}" {STROKE}/><path d="M72 28 Q100 62 128 28" fill="none" stroke="rgba(239,230,210,.25)" stroke-width="3"/><path d="M68 140 L132 140 L142 180 L58 180 Z" fill="none" stroke="rgba(239,230,210,.12)"/><image href="img/monogram.webp" x="75" y="62" width="50" height="49" style="mix-blend-mode:screen"/></svg>'
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hoodie concept"><path d="M64 26 Q100 -4 136 26 L180 58 L190 176 L162 180 L152 96 L152 186 L48 186 L48 96 L38 180 L10 176 L20 58 Z" fill="{fill}" {STROKE}/><path d="M72 28 Q100 62 128 28" fill="none" stroke="rgba(239,230,210,.25)" stroke-width="3"/><path d="M68 140 L132 140 L142 180 L58 180 Z" fill="none" stroke="rgba(239,230,210,.12)"/><image href="img/monogram.webp" x="75" y="62" width="50" height="49"/></svg>'
 
 def cap(fill="#171513"):
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hat concept"><path d="M34 128 Q30 54 100 48 Q170 54 166 128 Q100 112 34 128 Z" fill="{fill}" {STROKE}/><path d="M30 128 Q100 108 170 128 Q190 134 196 146 Q100 126 6 146 Q12 134 30 128 Z" fill="#0e0d0b" {STROKE}/><image href="img/monogram.webp" x="82" y="70" width="36" height="35" style="mix-blend-mode:screen"/></svg>'
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hat concept"><path d="M34 128 Q30 54 100 48 Q170 54 166 128 Q100 112 34 128 Z" fill="{fill}" {STROKE}/><path d="M30 128 Q100 108 170 128 Q190 134 196 146 Q100 126 6 146 Q12 134 30 128 Z" fill="#0e0d0b" {STROKE}/><image href="img/monogram.webp" x="82" y="70" width="36" height="35"/></svg>'
 
 def long(fill="#171513"):
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Long sleeve concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L180 50 L192 170 L168 174 L150 84 L146 74 L146 182 L54 182 L54 74 L50 84 L32 174 L8 170 L20 50 Z" fill="{fill}" {STROKE}/><image href="img/monogram.webp" x="75" y="54" width="50" height="49" style="mix-blend-mode:screen"/></svg>'
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Long sleeve concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L180 50 L192 170 L168 174 L150 84 L146 74 L146 182 L54 182 L54 74 L50 84 L32 174 L8 170 L20 50 Z" fill="{fill}" {STROKE}/><image href="img/monogram.webp" x="75" y="54" width="50" height="49"/></svg>'
 
 TICK = "".join('<span>Hope Not Dope</span><i>&#10022;</i><span>Recovery First</span><i>&#10022;</i><span>Change Looks Good On You</span><i>&#10022;</i><span>Your Past Doesn&#39;t Define Your Future</span><i>&#10022;</i>' for _ in range(4))
 

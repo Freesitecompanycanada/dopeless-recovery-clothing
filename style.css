@@ -26,7 +26,7 @@ h2.big{font-size:clamp(2rem,5vw,3.8rem);font-weight:400}h2 em{font-style:italic;
 /* header */
 .bar{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(20px,4vw,48px);background:rgba(5,4,3,.55);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
 .bar.stuck{background:rgba(5,4,3,.92);border-color:var(--line)}
-.mark{display:flex;align-items:center;gap:12px}.mark img{width:34px;mix-blend-mode:screen;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}.mark b{font:600 .95rem var(--disp);letter-spacing:.3em}
+.mark{display:flex;align-items:center;gap:12px}.mark img{width:34px}.mark b{font:600 .95rem var(--disp);letter-spacing:.3em}
 .nav{display:flex;align-items:center;gap:30px}
 .nav a{font:600 .7rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#b3a98f;transition:.2s}.nav a:hover,.nav a.on{color:var(--cream)}
 .nav .cta{border:1px solid var(--cream);color:var(--cream);padding:11px 18px}.nav .cta:hover{background:var(--cream);color:var(--bk)}
@@ -75,7 +75,7 @@ input[type=email],input[name=name],select,textarea{width:100%;background:var(--b
 input:focus,select:focus,textarea:focus{outline:0;border-color:var(--sand)}
 .signup label{margin:0 8px;white-space:nowrap}.signup input[type=checkbox]{accent-color:var(--sand)}
 
-.phead{padding-block:clamp(70px,11vw,140px) clamp(30px,5vw,60px)}.phead.tall{min-height:60svh;display:grid;align-items:center}.tlogo{width:90px;margin:0 auto 26px;mix-blend-mode:screen;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
+.phead{padding-block:clamp(70px,11vw,140px) clamp(30px,5vw,60px)}.phead.tall{min-height:60svh;display:grid;align-items:center}.tlogo{width:90px;margin:0 auto 26px}
 .prose{padding-top:20px}.prose h3{font-size:1.6rem;margin:54px 0 18px}.prose p{margin-top:18px;color:#cfc6b2}
 blockquote{margin:44px 0;padding:6px 0 6px 28px;border-left:2px solid var(--sand);font:italic 400 clamp(1.4rem,3vw,2rem)/1.35 var(--disp)}
 .ticks{list-style:none}.ticks li{padding:14px 0 14px 34px;border-bottom:1px solid var(--line);position:relative;color:#cfc6b2}.ticks li::before{content:"\2726";position:absolute;left:0;color:var(--sand)}
