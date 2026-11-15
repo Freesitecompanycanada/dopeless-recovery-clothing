@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://freesitecompanycanada.github.io/dopeless-recovery-clothing/sitemap.xml
