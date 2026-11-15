@@ -90,7 +90,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--coa
 .fcols a{display:block;color:#b3a98f;padding:4px 0}.fcols a:hover{color:var(--cream)}.fcols p{color:#b3a98f;font-size:.95rem}
 .legal{font-size:.75rem;color:var(--ash);border-top:1px solid var(--line);padding-top:24px}.legal a{text-decoration:underline}
 
-.js main section:not(.hero) .wrap{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.js main .wrap.in{opacity:1;transform:none}
+.js main section:not(.hero) .wrap{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.js main section:not(.hero) .wrap.in{opacity:1;transform:none}
 
 @media(max-width:860px){
 .burger{display:block}
