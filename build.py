@@ -4,20 +4,23 @@ FORM = "https://formsubmit.co/doplesscloths@gmail.com"  # TODO: confirm Jason's 
 SITE = "https://freesitecompanycanada.github.io/dopeless-recovery-clothing/"
 
 NAV = [("index.html","Home"),("shop.html","Collections"),("mission.html","Mission"),("about.html","About"),("contact.html","Contact")]
-STROKE = 'stroke="rgba(239,230,210,.16)"'
+STROKE = 'stroke="rgba(0,0,0,.35)"'
 
-def tee(fill="#171513", mono=True):
-    m = '<image href="img/monogram.webp" x="72" y="52" width="56" height="55"/>' if mono else ''
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="T-shirt concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L186 56 L166 88 L146 74 L146 182 L54 182 L54 74 L34 88 L14 56 Z" fill="{fill}" {STROKE}/><path d="M86 13 Q100 32 114 13" fill="none" stroke="rgba(239,230,210,.25)" stroke-width="3"/>{m}</svg>'
+def mono_for(fill):
+    return "img/monogram-dark.webp" if fill=="#e8dfca" else "img/monogram.webp"
 
-def hoodie(fill="#171513"):
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hoodie concept"><path d="M64 26 Q100 -4 136 26 L180 58 L190 176 L162 180 L152 96 L152 186 L48 186 L48 96 L38 180 L10 176 L20 58 Z" fill="{fill}" {STROKE}/><path d="M72 28 Q100 62 128 28" fill="none" stroke="rgba(239,230,210,.25)" stroke-width="3"/><path d="M68 140 L132 140 L142 180 L58 180 Z" fill="none" stroke="rgba(239,230,210,.12)"/><image href="img/monogram.webp" x="75" y="62" width="50" height="49"/></svg>'
+def tee(fill="#141210", mono=True):
+    m = '<image href="'+mono_for(fill)+'" x="72" y="52" width="56" height="55"/>' if mono else ''
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="T-shirt concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L186 56 L166 88 L146 74 L146 182 L54 182 L54 74 L34 88 L14 56 Z" fill="{fill}" {STROKE}/><path d="M86 13 Q100 32 114 13" fill="none" stroke="rgba(120,110,90,.55)" stroke-width="3"/>{m}</svg>'
 
-def cap(fill="#171513"):
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hat concept"><path d="M34 128 Q30 54 100 48 Q170 54 166 128 Q100 112 34 128 Z" fill="{fill}" {STROKE}/><path d="M30 128 Q100 108 170 128 Q190 134 196 146 Q100 126 6 146 Q12 134 30 128 Z" fill="#0e0d0b" {STROKE}/><image href="img/monogram.webp" x="82" y="70" width="36" height="35"/></svg>'
+def hoodie(fill="#141210"):
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hoodie concept"><path d="M64 26 Q100 -4 136 26 L180 58 L190 176 L162 180 L152 96 L152 186 L48 186 L48 96 L38 180 L10 176 L20 58 Z" fill="{fill}" {STROKE}/><path d="M72 28 Q100 62 128 28" fill="none" stroke="rgba(120,110,90,.55)" stroke-width="3"/><path d="M68 140 L132 140 L142 180 L58 180 Z" fill="none" stroke="rgba(120,110,90,.45)"/><image href="{mono_for(fill)}" x="75" y="62" width="50" height="49"/></svg>'
 
-def long(fill="#171513"):
-    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Long sleeve concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L180 50 L192 170 L168 174 L150 84 L146 74 L146 182 L54 182 L54 74 L50 84 L32 174 L8 170 L20 50 Z" fill="{fill}" {STROKE}/><image href="img/monogram.webp" x="75" y="54" width="50" height="49"/></svg>'
+def cap(fill="#141210"):
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Hat concept"><path d="M34 128 Q30 54 100 48 Q170 54 166 128 Q100 112 34 128 Z" fill="{fill}" {STROKE}/><path d="M30 128 Q100 108 170 128 Q190 134 196 146 Q100 126 6 146 Q12 134 30 128 Z" fill="{fill}" {STROKE}/><image href="{mono_for(fill)}" x="82" y="70" width="36" height="35"/></svg>'
+
+def long(fill="#141210"):
+    return f'<svg viewBox="0 0 200 200" role="img" aria-label="Long sleeve concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L180 50 L192 170 L168 174 L150 84 L146 74 L146 182 L54 182 L54 74 L50 84 L32 174 L8 170 L20 50 Z" fill="{fill}" {STROKE}/><image href="{mono_for(fill)}" x="75" y="54" width="50" height="49"/></svg>'
 
 TICK = "".join('<span>Hope Not Dope</span><i>&#10022;</i><span>Recovery First</span><i>&#10022;</i><span>Change Looks Good On You</span><i>&#10022;</i><span>Your Past Doesn&#39;t Define Your Future</span><i>&#10022;</i>' for _ in range(4))
 
@@ -55,13 +58,13 @@ def foot():
     return f'''</main>
 <footer><div class="wrap foot"><img class="flogo" src="img/logo.webp" alt="Dopeless Recovery Clothing" loading="lazy">
 <div class="fcols"><div><h4>Explore</h4>{f}</div><div><h4>Partner</h4><a href="contact.html#partner">Sponsorships</a><a href="contact.html#partner">Collaborations</a><a href="contact.html#partner">Wholesale</a></div><div><h4>Dopeless</h4><p>Winnipeg, Manitoba, Canada<br>Shipping across Canada soon.</p></div></div>
-<p class="legal">&copy; 2026 Dopeless Recovery Clothing&trade;. Recovery-inspired streetwear. Not a treatment provider &mdash; if you or someone you know needs support, call or text <a href="https://988.ca" rel="noopener">9-8-8</a> (Canada).</p></div></footer>
+<p class="legal">&copy; 2026 Dopeless Recovery Clothing&trade;. Recovery-inspired streetwear. Not a treatment provider &mdash; if you or someone you know needs support, call or text <a href="https://988.ca" rel="noopener">9-8-8</a> (Canada).</p><p class="credit">Website by <a href="https://freesitecompany.com" rel="noopener">Free Site Company</a></p></div></footer>
 <script src="site.js"></script></body></html>'''
 
 pages = {}
 
 pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recovery-inspired luxury streetwear from Winnipeg. Recovery first. Join the list for first access to the debut collection.","index.html") + f'''
-<section class="hero"><div class="hero-glow"></div><div class="hero-in">
+<section class="hero"><div class="hero-in">
 <img class="hero-logo" src="img/logo.webp" alt="Dopeless Recovery Clothing - Recovery first so the things I love don't come second" width="1400" height="933" fetchpriority="high">
 <h1 class="sr">Dopeless Recovery Clothing</h1>
 <p class="hero-line">Change looks good on you.</p>
@@ -77,7 +80,7 @@ pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recover
 <a class="card" href="shop.html#tees"><div class="art">{tee()}</div><div class="meta"><h3>The Crown Tee</h3><p>Heavyweight tee &middot; DR monogram</p></div><span class="tag">Coming soon</span></a>
 <a class="card" href="shop.html#hoodies"><div class="art">{hoodie()}</div><div class="meta"><h3>Recovery First Hoodie</h3><p>Heavyweight fleece</p></div><span class="tag">Sampling</span></a>
 <a class="card" href="shop.html#hats"><div class="art">{cap()}</div><div class="meta"><h3>The Monogram Cap</h3><p>Structured, embroidered</p></div><span class="tag">Coming soon</span></a>
-<a class="card" href="shop.html#tees"><div class="art">{long("#1d1a17")}</div><div class="meta"><h3>Hope Not Dope Long Sleeve</h3><p>Premium cotton</p></div><span class="tag">Concept</span></a>
+<a class="card" href="shop.html#tees"><div class="art">{long("#e8dfca")}</div><div class="meta"><h3>Hope Not Dope Long Sleeve</h3><p>Premium cotton</p></div><span class="tag">Concept</span></a>
 </div><p class="note">Concept renders shown. Final production samples, photography and pricing to follow.</p></div></section>
 
 <section class="slogans"><div class="wrap"><div class="s"><span>01</span><b>Hope Not Dope</b></div><div class="s"><span>02</span><b>Recovery First</b></div><div class="s"><span>03</span><b>Change Looks Good On You</b></div><div class="s"><span>04</span><b>Your Past Doesn't Define Your Future</b></div></div></section>
@@ -92,9 +95,9 @@ def sec(id_, title, sub, items):
 
 pages["shop.html"] = head("Collections - Dopeless Recovery Clothing","Tees, long sleeves, hoodies, hats and the luxury collection. Preview the Dopeless debut and register your interest.","shop.html") + f'''
 <section class="phead"><div class="wrap narrow"><p class="eyebrow">Collections</p><h1>The debut drop.</h1><p class="lede">Pieces are in sampling now. Register interest and you'll hear first &mdash; online store opening soon.</p></div></section>
-{sec("tees","Tees & Long Sleeves","Essentials",[("The Crown Tee","Heavyweight &middot; DR monogram",tee(),"Coming soon"),("Hope Not Dope Tee","Boxy fit &middot; back print",tee("#1d1a17",False),"Concept"),("Hope Not Dope Long Sleeve","Premium cotton",long("#1d1a17"),"Concept"),("Change Looks Good Long Sleeve","Sleeve print",long(),"Concept")])}
-{sec("hoodies","Hoodies & Sweatshirts","Heavyweight",[("Recovery First Hoodie","Heavyweight fleece",hoodie(),"Sampling"),("Crown Crewneck","Embroidered chest crest",hoodie("#1d1a17"),"Concept")])}
-{sec("hats","Hats & Accessories","Details",[("The Monogram Cap","Structured &middot; embroidered",cap(),"Coming soon"),("Dopeless Beanie","Folded cuff &middot; woven label",cap("#1d1a17"),"Concept")])}
+{sec("tees","Tees & Long Sleeves","Essentials",[("The Crown Tee","Heavyweight &middot; DR monogram",tee(),"Coming soon"),("Hope Not Dope Tee","Boxy fit &middot; back print",tee("#e8dfca",False),"Concept"),("Hope Not Dope Long Sleeve","Premium cotton",long("#e8dfca"),"Concept"),("Change Looks Good Long Sleeve","Sleeve print",long(),"Concept")])}
+{sec("hoodies","Hoodies & Sweatshirts","Heavyweight",[("Recovery First Hoodie","Heavyweight fleece",hoodie(),"Sampling"),("Crown Crewneck","Embroidered chest crest",hoodie("#e8dfca"),"Concept")])}
+{sec("hats","Hats & Accessories","Details",[("The Monogram Cap","Structured &middot; embroidered",cap(),"Coming soon"),("Dopeless Beanie","Folded cuff &middot; woven label",cap("#e8dfca"),"Concept")])}
 <section class="coll lux"><div class="wrap narrow center"><p class="eyebrow">Luxury streetwear</p><h2>The Dopeless Luxe line</h2><p class="lede">Elevated cuts, premium fabrics, limited runs. A future collection for those who want the full expression of the brand.</p><span class="tag solo">In development</span></div></section>
 {signup("drop","Get the drop link first.","Tell us what you want and we'll email you the moment it's live.","shop")}''' + foot()
 
