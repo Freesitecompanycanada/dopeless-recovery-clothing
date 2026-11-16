@@ -68,7 +68,7 @@ pages = {}
 STEPS = '\n<section class="steps"><div class="wrap"><div class="shead"><div><p class="eyebrow">The roadmap</p><h2>From samples to store.</h2></div></div>\n<ol><li><b>Sampling</b><p>Finalizing production-ready artwork and the first heavyweight samples.</p><em>Now</em></li><li><b>Debut drop</b><p>Tees, long sleeves, hoodies and hats. The early-access list gets first call.</p><em>Next</em></li><li><b>Online store</b><p>Direct checkout across Canada, built to grow into the US and beyond.</p><em>Soon</em></li><li><b>Luxe &amp; collabs</b><p>Limited runs, partnerships and sponsored collaborations.</p><em>Later</em></li></ol></div></section>\n'
 
 pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recovery-inspired luxury streetwear from Winnipeg. Recovery first. Join the list for first access to the debut collection.","index.html") + f'''
-<section class="hero" style="--bg:url(img/summit.webp)"><div class="hero-in">
+<section class="hero" style="--bg:url(img/products/hero-models.webp)"><div class="hero-in">
 <img class="hero-logo" src="img/logo.webp" alt="Dopeless Recovery Clothing - Recovery first so the things I love don't come second" width="1400" height="933" fetchpriority="high">
 <h1 class="sr">Dopeless Recovery Clothing</h1>
 <p class="hero-line">Change looks good on you.</p>
@@ -80,7 +80,7 @@ pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recover
 <p class="lede">Dopeless is luxury streetwear with a reason behind it. Premium heavyweight pieces, made for people who've done the work &mdash; and for everyone who believes in second chances.</p></div></section>
 
 
-<section class="walk"><div class="wrap two"><figure class="ph tall"><img src="img/walk.webp" alt="A lone figure walking across a suspension bridge toward the light" loading="lazy"></figure>
+<section class="walk"><div class="wrap two"><figure class="ph tall"><img src="img/products/story-man.webp" alt="Man in a stone Dopeless hoodie and beanie" loading="lazy"></figure>
 <div><p class="eyebrow">The idea</p><h2>Forward is a direction,<br><em>not a finish line.</em></h2><p>Recovery isn't one big moment. It's the next step, then the next one. Dopeless is built on that &mdash; clothing for the person still walking.</p><p>No pity, no preaching. Just a brand that says <b>hope, not dope</b> and looks good doing it.</p><a class="link" href="mission.html">Our mission &rarr;</a></div></div></section>
 
 <section class="pieces"><div class="wrap"><div class="shead"><div><p class="eyebrow">Debut collection</p><h2>Samples in progress</h2></div><a class="link" href="shop.html">All pieces &rarr;</a></div>
@@ -92,10 +92,10 @@ pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recover
 </div><p class="note">Concept renders shown. Final production samples, photography and pricing to follow.</p></div></section>
 
 
-<section class="band" style="--bg:url(img/peak.webp)"><div class="wrap narrow center"><p class="eyebrow">Recovery first</p><h2 class="big">So the things I love<br><em>don't come second.</em></h2></div></section>
+<section class="band" style="--bg:url(img/products/look-nothing-constant.webp)"><div class="wrap narrow center"><p class="eyebrow">Recovery first</p><h2 class="big">So the things I love<br><em>don't come second.</em></h2></div></section>
 
 <section class="who"><div class="wrap"><div class="shead"><div><p class="eyebrow">Who it's for</p><h2>Made for everyone who's in it.</h2></div></div>
-<div class="tri"><div style="--bg:url(img/light.webp)"><span>01</span><h3>In recovery</h3><p>People rebuilding their lives, one day at a time.</p></div><div style="--bg:url(img/ridge.webp)"><span>02</span><h3>Affected by addiction</h3><p>Families and friends who've lived the other side of it.</p></div><div style="--bg:url(img/hero.webp)"><span>03</span><h3>Streetwear heads</h3><p>People who want clothing with weight, meaning and identity.</p></div></div></div></section>
+<div class="tri"><div style="--bg:url(img/products/who-man.webp)"><span>01</span><h3>In recovery</h3><p>People rebuilding their lives, one day at a time.</p></div><div style="--bg:url(img/products/who-woman.webp)"><span>02</span><h3>Affected by addiction</h3><p>Families and friends who've lived the other side of it.</p></div><div style="--bg:url(img/products/who-street.webp)"><span>03</span><h3>Streetwear heads</h3><p>People who want clothing with weight, meaning and identity.</p></div></div></div></section>
 <section class="slogans"><div class="wrap"><div class="s"><span>01</span><b>Hope Not Dope</b></div><div class="s"><span>02</span><b>Recovery First</b></div><div class="s"><span>03</span><b>Change Looks Good On You</b></div><div class="s"><span>04</span><b>Your Past Doesn't Define Your Future</b></div></div></section>
 
 <section class="split"><div class="wrap two"><div><p class="eyebrow">Why it exists</p><h2>Something positive,<br>made from something heavy.</h2></div>
@@ -107,7 +107,7 @@ def sec(id_, title, sub, items):
     return f'<section class="coll" id="{id_}"><div class="wrap"><div class="shead"><div><p class="eyebrow">{sub}</p><h2>{title}</h2></div></div><div class="grid">{cards}</div></div></section>'
 
 pages["shop.html"] = head("Collections - Dopeless Recovery Clothing","Tees, long sleeves, hoodies, hats and the luxury collection. Preview the Dopeless debut and register your interest.","shop.html") + f'''
-<section class="phead photo" style="--bg:url(img/ridge.webp)"><div class="wrap narrow"><p class="eyebrow">Collections</p><h1>The debut drop.</h1><p class="lede">Pieces are in sampling now. Register interest and you'll hear first &mdash; online store opening soon.</p></div></section>
+<section class="phead photo" style="--bg:url(img/products/look-just-for-today.webp)"><div class="wrap narrow"><p class="eyebrow">Collections</p><h1>The debut drop.</h1><p class="lede">Pieces are in sampling now. Register interest and you'll hear first &mdash; online store opening soon.</p></div></section>
 {sec("tees","Tees & Long Sleeves","Essentials",[("Hope Not Dope Tee","Heavyweight &middot; brush crown print",pic("hope-not-dope-tee","Hope Not Dope tee"),"Coming soon"),("Graffiti Tee","Boxy fit &middot; spray print",pic("graffiti-tee","Dopeless graffiti tee"),"Concept"),("Graffiti Long Sleeve","Premium cotton &middot; sleeve print",pic("graffiti-longsleeve","Dopeless graffiti long sleeve"),"Concept"),("Minimal Crown Line","Tee &middot; hoodie &middot; long sleeve",pic("recovery-hoodie-lineup","Minimal crown tee, hoodie and long sleeve"),"Concept")])}
 {sec("hoodies","Hoodies & Sweatshirts","Heavyweight",[("Deal Hope Not Dope Hoodie","Heavyweight fleece &middot; black",pic("deal-hope-hoodie","Deal Hope Not Dope hoodie"),"Sampling"),("Hope Dealer Hoodie","Heavyweight fleece &middot; black",pic("hope-dealer-hoodie","Hope Dealer hoodie"),"Concept"),("Dopeless Graffiti Hoodie","Heavyweight fleece &middot; stone",pic("dopeless-hoodie-cream","Dopeless graffiti hoodie"),"Concept"),("Changing The Streets Hoodie","12 steps at a time &middot; stone",pic("changing-streets-hoodie","Changing The Streets hoodie"),"Concept"),("Gone But Not Forgotten Hoodie","Memorial piece &middot; stone",pic("gone-not-forgotten","Gone But Not Forgotten hoodie"),"Concept")])}
 {sec("hats","Hats & Accessories","Details",[("Recovery Dad Hat","Washed cotton &middot; embroidered crown",pic("recovery-dad-hat","Dopeless crown dad hat"),"Coming soon")])}
@@ -116,26 +116,26 @@ pages["shop.html"] = head("Collections - Dopeless Recovery Clothing","Tees, long
 {signup("drop","Get the drop link first.","Tell us what you want and we'll email you the moment it's live.","shop")}''' + foot()
 
 pages["mission.html"] = head("Our Mission - Dopeless Recovery Clothing","Dopeless exists to make recovery something worth representing with pride - hope, resilience and second chances, in clothing worth wearing.","mission.html") + f'''
-<section class="phead photo" style="--bg:url(img/peak.webp)"><div class="wrap narrow"><p class="eyebrow">Our mission</p><h1>Recovery is worth representing with pride.</h1></div></section>
+<section class="phead photo" style="--bg:url(img/products/look-nothing-constant.webp)"><div class="wrap narrow"><p class="eyebrow">Our mission</p><h1>Recovery is worth representing with pride.</h1></div></section>
 <section class="prose"><div class="wrap narrow">
 <p class="lede">Dopeless Recovery Clothing is a recovery-inspired streetwear and lifestyle brand based in Winnipeg, Manitoba. We make clothing that stands for resilience, hope, personal growth &mdash; and the belief that people can change their lives.</p>
 <blockquote>We aren't trying to make addiction look fashionable.<br>We're making something positive out of a subject that has affected so many lives.</blockquote>
 <h3>Who it's for</h3><ul class="ticks"><li>People in recovery and people rebuilding their lives.</li><li>People personally affected by addiction.</li><li>Families and friends who've lived through it.</li><li>Anyone who believes in second chances and positive change.</li><li>Streetwear fans who appreciate clothing with meaning.</li></ul>
-<figure class="ph wide"><img src="img/walk.webp" alt="" loading="lazy" style="object-position:50% 70%"></figure><h3>What we stand for</h3><div class="vals"><div><b>Hope Not Dope</b><p>A simple choice, made daily.</p></div><div><b>Recovery First</b><p>So the things I love don't come second.</p></div><div><b>Change Looks Good On You</b><p>Growth is the best fit you'll ever wear.</p></div><div><b>Your Past Doesn't Define Your Future</b><p>Where you've been isn't where you're going.</p></div></div>
+<figure class="ph wide"><img src="img/products/look-change-looks-good.webp" alt="" loading="lazy"></figure><h3>What we stand for</h3><div class="vals"><div><b>Hope Not Dope</b><p>A simple choice, made daily.</p></div><div><b>Recovery First</b><p>So the things I love don't come second.</p></div><div><b>Change Looks Good On You</b><p>Growth is the best fit you'll ever wear.</p></div><div><b>Your Past Doesn't Define Your Future</b><p>Where you've been isn't where you're going.</p></div></div>
 </div></section>
 {signup("drop","Wear the message.","Join the list and be there at launch.","mission")}''' + foot()
 
 pages["about.html"] = head("About - Dopeless Recovery Clothing","Founded by Jason Roorda in Winnipeg, Dopeless is a recovery-inspired luxury streetwear brand built from the ground up.","about.html") + f'''
-<section class="phead photo" style="--bg:url(img/summit.webp)"><div class="wrap narrow"><p class="eyebrow">About</p><h1>Built from the ground up.</h1></div></section>
+<section class="phead photo" style="--bg:url(img/products/look-ask-me.webp)"><div class="wrap narrow"><p class="eyebrow">About</p><h1>Built from the ground up.</h1></div></section>
 <section class="prose"><div class="wrap narrow">
 <p class="lede">Dopeless was founded in Winnipeg by Jason Roorda, who has been developing the brand, logos, clothing concepts and graphics himself &mdash; a premium label that happens to stand for something meaningful.</p>
 <p>It's streetwear first: clean, bold and professional. The message is there for those who know &mdash; it isn't shouted at everyone else.</p>
-<figure class="ph wide"><img src="img/hero.webp" alt="" loading="lazy"></figure><div class="timeline"><div><span>Now</span><b>Sampling &amp; pre-launch</b><p>Finalizing production-ready artwork and first samples.</p></div><div><span>Next</span><b>Debut collection + online store</b><p>Tees, hoodies, hats &mdash; direct purchase across Canada.</p></div><div><span>Then</span><b>Luxe line &amp; collaborations</b><p>Limited runs, partnerships and expansion into the US and beyond.</p></div></div>
+<figure class="ph wide"><img src="img/products/look-street-culture.webp" alt="" loading="lazy"></figure><div class="timeline"><div><span>Now</span><b>Sampling &amp; pre-launch</b><p>Finalizing production-ready artwork and first samples.</p></div><div><span>Next</span><b>Debut collection + online store</b><p>Tees, hoodies, hats &mdash; direct purchase across Canada.</p></div><div><span>Then</span><b>Luxe line &amp; collaborations</b><p>Limited runs, partnerships and expansion into the US and beyond.</p></div></div>
 <p><a class="btn" href="contact.html#partner">Partner with Dopeless</a></p></div></section>
 {signup("drop","Follow the build.","Be the first to see samples and release dates.","about")}''' + foot()
 
 pages["contact.html"] = head("Contact - Dopeless Recovery Clothing","Get in touch with Dopeless Recovery Clothing in Winnipeg - questions, partnerships, sponsorships and collaborations.","contact.html") + f'''
-<section class="phead photo" style="--bg:url(img/light.webp)"><div class="wrap narrow"><p class="eyebrow">Contact</p><h1>Let's talk.</h1><p class="lede">Questions, partnerships, sponsorships or collaborations &mdash; we read everything.</p></div></section>
+<section class="phead photo" style="--bg:url(img/products/look-hope-dealer.webp)"><div class="wrap narrow"><p class="eyebrow">Contact</p><h1>Let's talk.</h1><p class="lede">Questions, partnerships, sponsorships or collaborations &mdash; we read everything.</p></div></section>
 <section class="prose" id="partner"><div class="wrap narrow">
 <form class="cform" action="{FORM}" method="POST"><input type="hidden" name="_subject" value="Dopeless - website message"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off"><input type="hidden" name="_next" value="{SITE}thanks.html">
 <label>Name<input name="name" required></label><label>Email<input type="email" name="email" required></label>
