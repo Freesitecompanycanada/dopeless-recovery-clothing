@@ -22,6 +22,9 @@ def cap(fill="#141210"):
 def long(fill="#141210"):
     return f'<svg viewBox="0 0 200 200" role="img" aria-label="Long sleeve concept"><path d="M62 20 L86 13 Q100 32 114 13 L138 20 L180 50 L192 170 L168 174 L150 84 L146 74 L146 182 L54 182 L54 74 L50 84 L32 174 L8 170 L20 50 Z" fill="{fill}" {STROKE}/><image href="{mono_for(fill)}" x="75" y="54" width="50" height="49"/></svg>'
 
+def pic(n,alt):
+    return f'<img src="img/products/{n}.webp" alt="{alt}" loading="lazy">'
+
 TICK = "".join('<span>Hope Not Dope</span><i>&#10022;</i><span>Recovery First</span><i>&#10022;</i><span>Change Looks Good On You</span><i>&#10022;</i><span>Your Past Doesn&#39;t Define Your Future</span><i>&#10022;</i>' for _ in range(4))
 
 def head(title, desc, page):
@@ -82,10 +85,10 @@ pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recover
 
 <section class="pieces"><div class="wrap"><div class="shead"><div><p class="eyebrow">Debut collection</p><h2>Samples in progress</h2></div><a class="link" href="shop.html">All pieces &rarr;</a></div>
 <div class="grid">
-<a class="card" href="shop.html#tees"><div class="art">{tee()}</div><div class="meta"><h3>The Crown Tee</h3><p>Heavyweight tee &middot; DR monogram</p></div><span class="tag">Coming soon</span></a>
-<a class="card" href="shop.html#hoodies"><div class="art">{hoodie()}</div><div class="meta"><h3>Recovery First Hoodie</h3><p>Heavyweight fleece</p></div><span class="tag">Sampling</span></a>
-<a class="card" href="shop.html#hats"><div class="art">{cap()}</div><div class="meta"><h3>The Monogram Cap</h3><p>Structured, embroidered</p></div><span class="tag">Coming soon</span></a>
-<a class="card" href="shop.html#tees"><div class="art">{long("#e8dfca")}</div><div class="meta"><h3>Hope Not Dope Long Sleeve</h3><p>Premium cotton</p></div><span class="tag">Concept</span></a>
+<a class="card" href="shop.html#tees"><div class="art pic">{pic("hope-not-dope-tee","Hope Not Dope tee, front and back")}</div><div class="meta"><h3>Hope Not Dope Tee</h3><p>Heavyweight &middot; brush crown print</p></div><span class="tag">Coming soon</span></a>
+<a class="card" href="shop.html#hoodies"><div class="art pic">{pic("deal-hope-hoodie","Deal Hope Not Dope hoodie, front and back")}</div><div class="meta"><h3>Deal Hope Not Dope Hoodie</h3><p>Heavyweight fleece</p></div><span class="tag">Sampling</span></a>
+<a class="card" href="shop.html#hats"><div class="art pic">{pic("recovery-dad-hat","Dopeless crown dad hat")}</div><div class="meta"><h3>Recovery Dad Hat</h3><p>Washed cotton &middot; embroidered crown</p></div><span class="tag">Coming soon</span></a>
+<a class="card" href="shop.html#tees"><div class="art pic">{pic("graffiti-longsleeve","Dopeless graffiti long sleeve, front and back")}</div><div class="meta"><h3>Graffiti Long Sleeve</h3><p>Premium cotton &middot; sleeve print</p></div><span class="tag">Concept</span></a>
 </div><p class="note">Concept renders shown. Final production samples, photography and pricing to follow.</p></div></section>
 
 
@@ -100,14 +103,15 @@ pages["index.html"] = head("Dopeless Recovery Clothing - Hope Not Dope","Recover
 {signup()}''' + foot()
 
 def sec(id_, title, sub, items):
-    cards = "".join(f'<div class="card static"><div class="art">{a}</div><div class="meta"><h3>{n}</h3><p>{d}</p></div><span class="tag">{t}</span></div>' for n,d,a,t in items)
+    cards = "".join(f'<div class="card static"><div class="art pic">{a}</div><div class="meta"><h3>{n}</h3><p>{d}</p></div><span class="tag">{t}</span></div>' for n,d,a,t in items)
     return f'<section class="coll" id="{id_}"><div class="wrap"><div class="shead"><div><p class="eyebrow">{sub}</p><h2>{title}</h2></div></div><div class="grid">{cards}</div></div></section>'
 
 pages["shop.html"] = head("Collections - Dopeless Recovery Clothing","Tees, long sleeves, hoodies, hats and the luxury collection. Preview the Dopeless debut and register your interest.","shop.html") + f'''
 <section class="phead photo" style="--bg:url(img/ridge.webp)"><div class="wrap narrow"><p class="eyebrow">Collections</p><h1>The debut drop.</h1><p class="lede">Pieces are in sampling now. Register interest and you'll hear first &mdash; online store opening soon.</p></div></section>
-{sec("tees","Tees & Long Sleeves","Essentials",[("The Crown Tee","Heavyweight &middot; DR monogram",tee(),"Coming soon"),("Hope Not Dope Tee","Boxy fit &middot; back print",tee("#e8dfca",False),"Concept"),("Hope Not Dope Long Sleeve","Premium cotton",long("#e8dfca"),"Concept"),("Change Looks Good Long Sleeve","Sleeve print",long(),"Concept")])}
-{sec("hoodies","Hoodies & Sweatshirts","Heavyweight",[("Recovery First Hoodie","Heavyweight fleece",hoodie(),"Sampling"),("Crown Crewneck","Embroidered chest crest",hoodie("#e8dfca"),"Concept")])}
-{sec("hats","Hats & Accessories","Details",[("The Monogram Cap","Structured &middot; embroidered",cap(),"Coming soon"),("Dopeless Beanie","Folded cuff &middot; woven label",cap("#e8dfca"),"Concept")])}
+{sec("tees","Tees & Long Sleeves","Essentials",[("Hope Not Dope Tee","Heavyweight &middot; brush crown print",pic("hope-not-dope-tee","Hope Not Dope tee"),"Coming soon"),("Graffiti Tee","Boxy fit &middot; spray print",pic("graffiti-tee","Dopeless graffiti tee"),"Concept"),("Graffiti Long Sleeve","Premium cotton &middot; sleeve print",pic("graffiti-longsleeve","Dopeless graffiti long sleeve"),"Concept"),("Minimal Crown Line","Tee &middot; hoodie &middot; long sleeve",pic("recovery-hoodie-lineup","Minimal crown tee, hoodie and long sleeve"),"Concept")])}
+{sec("hoodies","Hoodies & Sweatshirts","Heavyweight",[("Deal Hope Not Dope Hoodie","Heavyweight fleece &middot; black",pic("deal-hope-hoodie","Deal Hope Not Dope hoodie"),"Sampling"),("Hope Dealer Hoodie","Heavyweight fleece &middot; black",pic("hope-dealer-hoodie","Hope Dealer hoodie"),"Concept"),("Dopeless Graffiti Hoodie","Heavyweight fleece &middot; stone",pic("dopeless-hoodie-cream","Dopeless graffiti hoodie"),"Concept"),("Changing The Streets Hoodie","12 steps at a time &middot; stone",pic("changing-streets-hoodie","Changing The Streets hoodie"),"Concept"),("Gone But Not Forgotten Hoodie","Memorial piece &middot; stone",pic("gone-not-forgotten","Gone But Not Forgotten hoodie"),"Concept")])}
+{sec("hats","Hats & Accessories","Details",[("Recovery Dad Hat","Washed cotton &middot; embroidered crown",pic("recovery-dad-hat","Dopeless crown dad hat"),"Coming soon")])}
+<section class="coll look" id="lookbook"><div class="wrap"><div class="shead"><div><p class="eyebrow">Lookbook</p><h2>Same fight. New message.</h2></div></div><div class="lb">{"".join(f'<figure>{pic(n,a)}</figure>' for n,a in [("look-just-for-today","Just For Today collection"),("look-change-looks-good","Change Looks Good On You collection"),("look-ask-me","Ask Me About My Story collection"),("look-hope-dealer","Hope Dealer collection"),("look-nothing-constant","Nothing Is Constant But Change collection"),("look-street-culture","Street Culture collection")])}</div><p class="note">Concept renders. Final production samples and photography to follow.</p></div></section>
 <section class="coll lux"><div class="wrap narrow center"><p class="eyebrow">Luxury streetwear</p><h2>The Dopeless Luxe line</h2><p class="lede">Elevated cuts, premium fabrics, limited runs. A future collection for those who want the full expression of the brand.</p><span class="tag solo">In development</span></div></section>
 {signup("drop","Get the drop link first.","Tell us what you want and we'll email you the moment it's live.","shop")}''' + foot()
 
